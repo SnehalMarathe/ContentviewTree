@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
-import { TreeviewModule } from 'ngx-treeview';
+import { MdCheckboxModule } from '@angular/material';
 import { TreeComponent } from './tree.component'
-import {MdExpansionModule } from '@angular/material';
+import { TreeModule } from 'angular-tree-component';
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
 @NgModule({
     declarations: [
         TreeComponent
     ],
-    imports: [TreeviewModule.forRoot(), MdExpansionModule],
+    imports: [TreeModule, MdCheckboxModule, PerfectScrollbarModule],
     exports: [
         TreeComponent
     ]
 })
 
-export class TreeModule { }
+
+export class MatTreeModule { }

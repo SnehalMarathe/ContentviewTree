@@ -1,73 +1,167 @@
-import { Component, Injectable, OnInit, ViewChild } from '@angular/core';
-import * as _ from 'lodash';
-import {
-    TreeviewI18n, TreeviewItem, TreeviewConfig, TreeviewHelper, TreeviewComponent,
-    TreeviewEventParser, OrderDownlineTreeviewEventParser, DownlineTreeviewItem
-} from 'ngx-treeview';
-import { ProductService } from './tree.component.services';
-
-
-@Injectable()
-export class ProductTreeviewConfig extends TreeviewConfig {
-    hasAllCheckBox = true;    
-    hasCollapseExpand = false;
-    
-}
+import { Component, OnInit } from '@angular/core';
+import { ITreeOptions, IActionMapping } from 'angular-tree-component';
 
 @Component({
-    selector: 'app-tree',
-    templateUrl: './tree.component.html',
-    providers: [
-        ProductService,
-        { provide: TreeviewEventParser, useClass: OrderDownlineTreeviewEventParser },
-        { provide: TreeviewConfig, useClass: ProductTreeviewConfig }
-    ]
+  selector: 'app-tree',
+  templateUrl: './tree.component.html',
+  styleUrls: ['./tree.component.css']
 })
-export class TreeComponent implements OnInit {
-    @ViewChild(TreeviewComponent) treeviewComponent: TreeviewComponent;
-    items: TreeviewItem[];
-    rows: string[];
 
-    constructor(
-        private service: ProductService
-    ) { }
+export class TreeComponent implements OnInit {   
+    data: any[] = [];
+    constructor() { }
+    nodes = [
+            {
+                "name": "SUBMISSION MASTER",
+                "name2": "PTS_LF_HDXSP195A_ALL_3387_20160701055041PRD_KO1VCN4N.mov",
+                "children": [{
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_NTSC_1080_16x9_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_PAL_4PCT_AudioRemap_5.mp4", 
+                            "children":[]
+                        }, 
+                        {   
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4", 
+                            "children":[{
+                                "name": "ARCHIVE MASTER",
+                                "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_NTSC_1080_16x9_INTL.mp4",
+                                "children": [{
+                                    "name": "ARCHIVE MASTER",
+                                    "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_PAL_4PCT_AudioRemap_5.mp4", 
+                                    "children":[{
+                                        "name": "ARCHIVE MASTER",
+                                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_NTSC_1080_16x9_INTL.mp4",
+                                        "children": [{
+                                            "name": "ARCHIVE MASTER",
+                                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_PAL_4PCT_AudioRemap_5.mp4", 
+                                            "children":[]
+                                        }]
+                                    }]
+                                }]
+                            }]
+                        }]
+                    },
+                    {
+                        "selected": false,
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                            "children":[]
+                        }]
+                    }]
+            },
+            {
+                "name": "Caption File",
+                "name2": "PTS_LF_HDXSP195A_ALL_3544_20160708012030PRD_W6L8XEVK.scc",
+                "children": [{
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_NTSC_1080_16x9_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_PAL_4PCT_AudioRemap_5.mp4", 
+                            "children":[]
+                        }, 
+                        {   
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4", 
+                            "children":[]
+                        }]
+                    },
+                    {
+                        "selected": false,
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                            "children":[]
+                        }]
+                    }]
+            },
+            {
+                "name": "Caption File",
+                "name2": "PTS_LF_HDXSP195A_ALL_3544_20160708012030PRD_W6L8XEVK.scc",
+                "children": [{
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_NTSC_1080_16x9_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_XDCAM_PAL_4PCT_AudioRemap_5.mp4", 
+                            "children":[]
+                        }, 
+                        {   
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4", 
+                            "children":[]
+                        }]
+                    },
+                    {
+                        "selected": false,
+                        "name": "ARCHIVE MASTER",
+                        "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                        "children": [{
+                            "name": "ARCHIVE MASTER",
+                            "name2": "SpongeBob_SquarePants_195A_SpongeBob_LongPants_HD_OPEN_SD_PAL_16X9_anamorphic_INTL.mp4",
+                            "children":[]
+                        }]
+                    }]
+            }
+        ]
+actionMapping: IActionMapping = {
+    mouse: {
+      click: (tree, node) => this.check(node, !node.data.checked)
+    }
+  };
 
+  options: ITreeOptions = {
+    actionMapping: this.actionMapping
+  };
+
+  public check(node, checked) {
+    this.updateChildNodeCheckbox(node, checked);
+    this.updateParentNodeCheckbox(node.realParent);
+  }
+  public updateChildNodeCheckbox(node, checked) {
+    node.data.checked = checked;
+    if (node.children) {
+      node.children.forEach((child) => this.updateChildNodeCheckbox(child, checked));
+    }
+  }
+  public updateParentNodeCheckbox(node) {
+    if (!node) {
+      return;
+    }
+
+    let allChildrenChecked = true;
+    let noChildChecked = true;
+
+    for (const child of node.children) {
+      if (!child.data.checked || child.data.indeterminate) {
+        allChildrenChecked = false;
+      }
+      if (child.data.checked) {
+        noChildChecked = false;
+      }
+    }
+
+    if (allChildrenChecked) {
+      node.data.checked = true;
+      node.data.indeterminate = false;
+    } else if (noChildChecked) {
+      node.data.checked = false;
+      node.data.indeterminate = false;
+    } else {
+      node.data.checked = true;
+      node.data.indeterminate = true;
+    }
+    this.updateParentNodeCheckbox(node.parent);
+  }
     ngOnInit() {
-        this.items = this.service.getProducts();
     }
 
-    onSelectedChange(downlineItems: DownlineTreeviewItem[]) {
-        this.rows = [];
-        downlineItems.forEach(downlineItem => {
-            const item = downlineItem.item;
-            const value = item.value;
-            const texts = [item.text];
-            let parent = downlineItem.parent;
-            while (!_.isNil(parent)) {
-                texts.push(parent.item.text);
-                parent = parent.parent;
-            }
-            const reverseTexts = _.reverse(texts);
-            const row = `${reverseTexts.join(' -> ')} : ${value}`;
-            this.rows.push(row);
-        });
-    }
-
-    removeItem(item: TreeviewItem) {
-        let isRemoved = false;
-        for (const tmpItem of this.items) {
-            if (tmpItem === item) {
-                _.remove(this.items, item);
-            } else {
-                isRemoved = TreeviewHelper.removeItem(tmpItem, item);
-                if (isRemoved) {
-                    break;
-                }
-            }
-        }
-
-        if (isRemoved) {
-            this.treeviewComponent.raiseSelectedChange();
-        }
-    }
 }

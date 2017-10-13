@@ -3,7 +3,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import"../node_modules/font-awesome/css/font-awesome.css";
 /*@import"../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";*/
-
+@import "../node_modules/angular-tree-component/dist/angular-tree-component.css";
 /* --> Helper Clasess are prefixed by 'h-' */
 
 html{
@@ -11,7 +11,12 @@ html{
     background-color: #EAEDF1;
     overflow: hidden;
 }
-
+.clearfix:before,
+.clearfix:after {
+    display: table;
+  content: " ";
+  clear: both;
+}
 *{
     margin: 0;
     padding: 0;
@@ -84,24 +89,6 @@ material-details > horizontal-split-pane{
 /* <-- endOf Card Title */
 
 /* --> material-tree */
-
-.material-type{
-    text-transform: uppercase;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: #333A44;
-}
-
-.material-file{
-    width: 100%;
-    opacity: 0.7;
-    color: #333A44;
-    font-size: 12px;
-    line-height: 14px;
-    display: block;
-}
-
 .vms-icon-button{
     padding: 3px 16px;
     border: 1px solid #CFD7E2;
@@ -642,8 +629,8 @@ content-title{
 .panel{
 border: 1px solid #D2DCE6;	
 background-color: #FFFFFF;
-height: 527px;	
-width: 640px;
+
+
 }
 .panel__header{
 height: 48px;
@@ -659,4 +646,114 @@ padding:8px 16px;
 }
 .panel__body{
     padding:16px;
+}
+.angular-tree-component{
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #333a44;
+}
+.toggle-children-wrapper-collapsed .toggle-children:before {
+    content: "\F0DA";
+    color: #616c7d;
+    font-size: 14px;
+    width: 16px;
+    background: none;
+    position: relative;
+    z-index: 2;
+    height: 20px;
+    font-family:FontAwesome;
+    line-height: 1.5;
+    left:-4px;
+}
+.toggle-children-wrapper-expanded .toggle-children:before {
+    content: "\F0D7";
+    color: #616c7d;
+    font-size: 14px;
+    width: 16px;
+    background: none;
+    position: relative;
+    z-index: 2;
+    height: 20px;
+    font-family:FontAwesome;
+    line-height: 1.5;
+    left:-4px;
+}
+.toggle-children-wrapper-expanded .toggle-children {
+    -webkit-transform:none;
+    transform: none;
+}
+.toggle-children {
+    background:none;
+    top:7px;
+    width:10px;
+    height:15px;
+    
+}
+tree-viewport {    
+    padding: 0 8px;
+}
+.tree-children{
+    border-left:1px solid #d2dce6;
+
+}
+.node-content-wrapper-active, .node-content-wrapper-focused, .node-content-wrapper:hover {
+    box-shadow: none;
+}
+
+.node-content-wrapper:hover {
+    background: none;
+}
+
+.mat-tree-options {
+    
+    vertical-align: middle;
+    padding-left: 8px;
+    display:table-cell;
+}
+.mat-checkbox{
+    display:table-cell;
+    vertical-align: middle;
+}
+.mat-checkbox-inner-container {
+    height: 14px !important;
+    width: 14px !important;
+}
+.material-type {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #333A44;
+}
+
+.material-file {   
+    opacity: 0.7;
+    color: #333A44;
+    font-size: 12px;
+    line-height: 14px;
+    display: block;
+    word-wrap: break-word;
+    
+}
+.cdk-visually-hidden {
+    border: 0;
+     clip: unset;
+     height: 14px; 
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 14px; 
+    opacity: 0;
+    left:0!important;
+}
+.mat-checkbox-checkmark-path {
+    stroke-dashoffset: 22.91026;
+    stroke-dasharray: 22.91026;
+    stroke-width: 4.66667px!important;
+}
+.node-content-wrapper{
+    padding:4px 0!important;
 }
