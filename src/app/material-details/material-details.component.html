@@ -1,5 +1,15 @@
 <!-- <material-tabs class="h-full-height h-component-gap"></material-tabs> -->
-<!-- <tabs></tabs> -->
-<app-tree> </app-tree>
+
+<vertical-split-pane  class="h-full-height" primary-component-minsize="320" separator-thickness="16" local-storage-key="key" (on-change)="onMaterialHChange($event)" > 
+  <div class="split-pane-content-primary h-full-height"> 
+    <app-tree class="h-full-height h-component-gap"> </app-tree>
+  </div>
+  <div class="split-pane-content-secondary h-full-height"> 
+   <tabs class="h-full-height h-component-gap"></tabs> 
+  </div>
+</vertical-split-pane>
+
+ 
+
 
 

@@ -124,7 +124,7 @@ actionMapping: IActionMapping = {
 
   public check(node, checked) {
     this.updateChildNodeCheckbox(node, checked);
-    this.updateParentNodeCheckbox(node.realParent);
+    //this.updateParentNodeCheckbox(node.realParent);
   }
   public updateChildNodeCheckbox(node, checked) {
     node.data.checked = checked;

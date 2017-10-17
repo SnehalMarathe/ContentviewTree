@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MdTabsModule, MdExpansionModule } from '@angular/material';
+import { MatTabsModule, MatExpansionModule } from '@angular/material';
 
 import { TabsComponent } from './tabs.component';
 import { GeneralComponent } from './general/general.component';
@@ -24,8 +24,8 @@ import { NotesComponent } from './notes/notes.component';
         NotesComponent
     ],
     imports: [
-        MdTabsModule, 
-        MdExpansionModule
+        MatTabsModule, 
+        MatExpansionModule
     ],
     exports: [
         TabsComponent

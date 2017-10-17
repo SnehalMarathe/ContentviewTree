@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MdCheckboxModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material';
 import { TreeComponent } from './tree.component'
 import { TreeModule } from 'angular-tree-component';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -9,7 +9,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
     declarations: [
         TreeComponent
     ],
-    imports: [TreeModule, MdCheckboxModule, PerfectScrollbarModule],
+    imports: [TreeModule, MatCheckboxModule, PerfectScrollbarModule],
     exports: [
         TreeComponent
     ]

@@ -12,12 +12,11 @@
         </ul>
     </div>
     <div class="panel__body">
-        <perfect-scrollbar class="container">
             <div class="tree">
                 <tree-root #tree [nodes]="nodes" [options]="options" class="material-p-tree h-full-height">
 
                     <ng-template #treeNodeTemplate let-node="node" let-index="index">
-                        <md-checkbox (change)="check(node, !node.data.checked)" [indeterminate]="node.data.indeterminate" [checked]="node.data.checked"></md-checkbox>
+                        <mat-checkbox (change)="check(node, !node.data.checked)" [indeterminate]="node.data.indeterminate" [checked]="node.data.checked"></mat-checkbox>
                         <div class="mat-tree-options">
                             <span class="material-type">{{node.data.name}}</span>
                             <span class="material-file">{{node.data.name2}}</span>
@@ -27,7 +26,5 @@
                     </ng-template>
                 </tree-root>
             </div>
-        </perfect-scrollbar>
-
     </div>
 </div>

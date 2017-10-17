@@ -719,7 +719,7 @@ letter-spacing: .2px;
     box-shadow: none;
 }
 .node-content-wrapper {
-    padding: 4px 8px!important;
+    padding: 4px 16px!important;
 }
 .node-content-wrapper:hover {
     background: none;
@@ -727,6 +727,7 @@ letter-spacing: .2px;
 .node-wrapper{
     border:1px solid #ffffff;
     transition: .2s ease-out all;
+    width:100%;
 }
 .node-wrapper:hover{
   border:1px solid #1bbae1;  
@@ -764,6 +765,7 @@ letter-spacing: .2px;
     display: block;
     word-wrap: break-word;
     font-weight:normal;
+    width:100%;
     
 }
 .material-file:hover{

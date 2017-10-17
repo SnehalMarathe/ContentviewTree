@@ -5,7 +5,7 @@ import { TabsComponent } from './material-details/tabs/tabs.component';
 import { TreeComponent } from './material-details/tree/tree.component';
 
 const appRoutes = [
-    { path: '', redirectTo: '/tabs', pathMatch: 'full' },
+    { path: '', redirectTo: '', pathMatch: 'full' },
     { path: 'tabs', component: TabsComponent },
     { path: 'tree', component: TreeComponent }
 ]
