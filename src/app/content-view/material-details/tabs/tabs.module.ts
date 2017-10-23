@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatTabsModule, MatExpansionModule } from '@angular/material';
-
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { TabsComponent } from './tabs.component';
 import { GeneralComponent } from './general/general.component';
 import { ClipsComponent } from './clips/clips.component';
@@ -25,7 +26,8 @@ import { NotesComponent } from './notes/notes.component';
     ],
     imports: [
         MatTabsModule, 
-        MatExpansionModule
+        MatExpansionModule,
+        PerfectScrollbarModule
     ],
     exports: [
         TabsComponent

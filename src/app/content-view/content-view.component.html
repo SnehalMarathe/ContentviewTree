@@ -1,0 +1,19 @@
+<content-title></content-title>
+
+<horizontal-split-pane class="h-full-height" style="height: calc(100% - 44px)" primary-component-minsize="360" primary-component-initialratio="360/window.screen.height" local-storage-key="split-pane" separator-thickness="16"> 
+  <div class="split-pane-content-primary content-details h-full-height">
+    <vertical-split-pane class="h-full-height" primary-component-minsize="480" secondary-component-minsize="window.screen.width - 480 - 48" primary-component-initialratio="640/window.screen.width" separator-thickness="16">
+      <div class="split-pane-content-primary h-full-height"> 
+        <content-video></content-video>
+      </div>
+      <div class="split-pane-content-secondary h-full-height"> 
+        <content-tabs class="h-full-height h-component-gap"></content-tabs>
+      </div>
+    </vertical-split-pane>
+  </div> 
+  <div class="split-pane-content-secondary material-details h-full-height">
+    <div class="lower h-full-height">
+      <material-details></material-details>
+    </div>
+  </div>
+</horizontal-split-pane>

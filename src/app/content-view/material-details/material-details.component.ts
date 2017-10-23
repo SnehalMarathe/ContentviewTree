@@ -14,7 +14,7 @@ export class MaterialDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  // @ViewChild(MaterialTabsComponent) materialTab:MaterialTabsComponent; 
+  // @ViewChild(TabsComponent) materialTab:TabsComponent; 
 
   // onMaterialHChange(e:any): void {
   //    this.materialTab.checkOverflowMaterial();
