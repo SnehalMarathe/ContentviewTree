@@ -1,3 +1,54 @@
-<perfect-scrollbar class="container" >  
-  history works!
-</perfect-scrollbar>  
+ 
+  <div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="submittedon">
+      <mat-header-cell *matHeaderCellDef> Submitted On</mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+          <span class="date">{{ element.submittedon.date }}</span>
+          <span class="time">{{ element.submittedon.time }}</span>  
+      </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="workorder">
+      <mat-header-cell *matHeaderCellDef> Work Order # </mat-header-cell>
+      <mat-cell *matCellDef="let element"> 
+         <a class="vms-link" href="javascript:;">{{element.workorder}}</a>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let element">
+        <span class="vms-status {{element.status.toLowerCase()}}">{{ element.status }}</span>
+      </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="submittedby">
+      <mat-header-cell *matHeaderCellDef> Submitted By </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.submittedby}} </mat-cell>
+    </ng-container>
+<!-- Weight Column -->
+    <ng-container matColumnDef="workflow">
+      <mat-header-cell *matHeaderCellDef> Workflow </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.workflow}} </mat-cell>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="task">
+      <mat-header-cell *matHeaderCellDef> Task </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.task}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+ 

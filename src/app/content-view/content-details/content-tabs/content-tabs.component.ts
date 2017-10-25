@@ -37,11 +37,6 @@ export class ContentTabsComponent implements AfterViewInit {
 
   ngAfterViewInit() {
 
-    $('body').on('click', (event)=> {
-      if($(event.target).attr('id') === 'btnAdd'){
-        alert('Tech Attribute\'s Add Functionality')
-      }
-    });
 
   }
 }

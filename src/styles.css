@@ -291,8 +291,7 @@ material-notes .vms-accordion {
 /* --> Action bar */
 .action__list {
 	display: inline-block;
-	position: absolute;
-	top: 0;
+	position: absolute;top: 0;
 	bottom: 0;
 	right: 8px;
 	height: 26px;
@@ -461,31 +460,15 @@ content-title {
 	box-sizing: border-box;
 	padding: .5em;
 }
-.mat-tab-label, .mat-tab-link {
-	font-size: 16px;
-}
-.mat-tab-group {
-	height: 100%;
-}
-.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-	background-color: #1bbae1;
-}
-.mat-tab-label {
-	transition: .2s ease-in all;
-	min-width: initial !important;
-}
+
 .card {
 	border: 1px solid #d2dce6;
 }
-.mat-tab-label-container {
-	background: #f9fafc;
-}
+
 .mat-ink-bar {
 	height: 3px !important;
 }
-.mat-tab-label.mat-tab-label-active, .mat-tab-label:hover {
-	opacity: 1;
-}
+
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
 	background-color: #1bbae1;
 }
@@ -540,7 +523,7 @@ content-title {
 	letter-spacing: .2px;
 }
 .panel__body {
-	height: 100%;
+	height: 85%;
 }
 .angular-tree-component {
 	text-transform: uppercase;
@@ -662,3 +645,7 @@ content-title {
 	stroke-width: 4.66667px!important;
 }
 
+.date, .time {
+    display: block;
+    font-size: 14px;
+}
