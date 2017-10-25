@@ -523,7 +523,7 @@ content-title {
 	letter-spacing: .2px;
 }
 .panel__body {
-	height: 85%;
+	height: 90%!important;
 }
 .angular-tree-component {
 	text-transform: uppercase;
