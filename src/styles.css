@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('~@angular/material/prebuilt-themes/indigo-pink.css');
 @import url('../node_modules/font-awesome/css/font-awesome.css');
-/*@import"../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";*/
+@import"../node_modules/roboto-fontface/css/roboto/roboto-fontface.css";
 @import url('../node_modules/angular-tree-component/dist/angular-tree-component.css');
 @import url('./assets/material-override.css');
 /* --> Helper Clasess are prefixed by 'h-' */
@@ -144,6 +144,7 @@ horizontal-split-separator .handle, .v-outer vertical-split-separator .handle {
 	font-size: 14px;
 	line-height: 1.5;
 	padding-left: 8px;
+	word-break: break-all;
 }
 .field__page-title {
 	width: calc(100% - 175px);
@@ -490,11 +491,26 @@ content-title {
 	background-color: #f9fafc !important;
 	position: relative !important;
 }
+div.mat-expansion-panel-content:not(.mat-expanded) {
+    height: 0px !important;
+    visibility: hidden !important;
+}
+
+.mat-expansion-panel-header  {
+    height: 48px;
+}
 .mat-expansion-indicator {
 	position: absolute;
 	left: 18px;
 	margin-top: -2px;
 }
+.mat-expansion-indicator::after {
+    
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+}
+
 .mat-expanded .mat-expansion-indicator {
 	margin-top: 2px;
 }
@@ -512,7 +528,6 @@ content-title {
 	border-bottom: 1px solid #D2DCE6;
 	background-color: #F9FAFC;
 	color: #333A44;
-	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 500;
 	padding: 8px 16px;
@@ -523,7 +538,7 @@ content-title {
 	letter-spacing: .2px;
 }
 .panel__body {
-	height: 90%!important;
+	height: 75%!important;
 }
 .angular-tree-component {
 	text-transform: uppercase;
@@ -564,12 +579,25 @@ content-title {
 }
 .toggle-children {
 	background: none;
-	top: 7px;
+	top: 10px;
 	width: 10px;
 	height: 15px;
 }
+
+tree-viewport{
+	overflow: unset;
+}
 .tree {
 	height: 100%;
+}
+.tree-node-level-1{
+	border-left:0!important;
+}
+tree-node-expander {
+    
+    width: 14px!important;
+	min-width: 14px!important;
+	max-width: 14px!important;
 }
 .tree-node {
 	border-left: 1px solid #d2dce6;
@@ -578,7 +606,7 @@ content-title {
 	box-shadow: none;
 }
 .node-content-wrapper {
-	padding: 4px 16px!important;
+	padding: 4px 6px!important;
 }
 .node-content-wrapper:hover {
 	background: none;
@@ -587,21 +615,24 @@ content-title {
 	border: 1px solid #ffffff;
 	transition: .2s ease-out all;
 	width: 100%;
+	padding-left:13px!important;
 }
 .node-wrapper:hover {
 	border: 1px solid #1bbae1;
 }
 .toggle-children-wrapper {
-	padding: 2px 3px 5px 16px;
+	padding: 2px 3px 5px 3px;
 }
 .mat-tree-options {
 	vertical-align: middle;
-	padding-left: 8px;
-	display: table-cell;
+    padding-left: 8px;
+    display: inline-block;
+    width: 94%;
 }
 .mat-checkbox {
-	display: table-cell;
-	vertical-align: middle;
+	display: inline-block;
+	margin-top:10px;
+	vertical-align: top;
 }
 .mat-checkbox-inner-container {
 	height: 14px !important;
@@ -617,12 +648,12 @@ content-title {
 .material-file {
 	opacity: 0.7;
 	color: #333A44;
-	font-size: 12px;
-	line-height: 14px;
+	font-size: 11px;
+	line-height: 12px;
 	display: block;
-	word-wrap: break-word;
 	font-weight: normal;
-	width: 100%;
+	width:100%;
+	word-break: break-all;
 }
 .material-file:hover {
 	opacity: 1;

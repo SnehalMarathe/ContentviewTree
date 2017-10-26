@@ -12,8 +12,9 @@
         </ul>
     </div>
     <div class="panel__body">
-        <perfect-scrollbar class="container" >  
+        
             <div class="tree">
+                <perfect-scrollbar class="container" >  
                 <tree-root #tree [nodes]="nodes" [options]="options" class="material-p-tree h-full-height">
 
                     <ng-template #treeNodeTemplate let-node="node" let-index="index">
@@ -26,7 +27,8 @@
 
                     </ng-template>
                 </tree-root>
+                </perfect-scrollbar>
             </div>
-            </perfect-scrollbar>
+            
     </div>
 </div>
