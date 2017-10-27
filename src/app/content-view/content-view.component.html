@@ -1,13 +1,13 @@
 <content-title (edit)="onEdit($event)"></content-title>
 
-<horizontal-split-pane class="h-full-height" style="height: calc(100% - 44px)" primary-component-minsize="360" primary-component-initialratio="360/window.screen.height"
+<!--<horizontal-split-pane class="h-full-height" style="height: calc(100% - 44px)" primary-component-minsize="360" primary-component-initialratio="360/window.screen.height"
   local-storage-key="split-pane" separator-thickness="16">
   <div class="split-pane-content-primary content-details h-full-height">
     <app-content-details></app-content-details>
-  </div>
-  <div class="split-pane-content-secondary material-details h-full-height">
+  </div> 
+</horizontal-split-pane>--> 
+<div class="split-pane-content-secondary material-details h-full-height">
     <div class="lower h-full-height">
       <material-details [edit]="editMode"></material-details>
     </div>
   </div>
-</horizontal-split-pane>

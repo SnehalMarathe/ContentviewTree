@@ -11,8 +11,6 @@ export class GeneralComponent implements OnInit {
 
   constructor() { }
 
-
-
   ngOnInit() {
   }
 
