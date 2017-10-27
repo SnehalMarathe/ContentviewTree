@@ -485,39 +485,7 @@ content-title {
 	border-width: 1px !important;
 	border-color: #acadae;
 }
-.mat-expansion-panel-header {
-	padding: 0 12px !important;
-	height: 40px !important;
-	background-color: #f9fafc !important;
-	position: relative !important;
-}
-div.mat-expansion-panel-content:not(.mat-expanded) {
-    height: 0px !important;
-    visibility: hidden !important;
-}
 
-.mat-expansion-panel-header  {
-    height: 48px;
-}
-.mat-expansion-indicator {
-	position: absolute;
-	left: 18px;
-	margin-top: -2px;
-}
-.mat-expansion-indicator::after {
-    
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    
-}
-
-.mat-expanded .mat-expansion-indicator {
-	margin-top: 2px;
-}
-.mat-expansion-panel-header .mat-content {
-	padding-left: 28px;
-	font-size: 14px;
-}
 .panel {
 	border: 1px solid #D2DCE6;
 	background-color: #FFFFFF;

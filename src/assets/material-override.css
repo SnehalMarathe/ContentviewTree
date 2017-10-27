@@ -1,3 +1,4 @@
+/*tab related classess*/
 .mat-tab-body-wrapper {
 	background-color: #fff;
     height:100%;
@@ -20,11 +21,68 @@
 .mat-tab-label {
 	transition: .2s ease-in all;
 	min-width: initial !important;
-	padding:0 12px!important;
+	padding:0 16px!important;
 }
 .mat-tab-label.mat-tab-label-active, .mat-tab-label:hover {
 	opacity: 1;
 }
 .mat-tab-label-container {
 	background: #f9fafc;
+}
+.mat-tab-label .mat-button {
+    min-width: 25px;
+    line-height: 36px;
+    padding: 0 4px;
+    margin-top: -4px;
+}
+/*accordion related classess*/
+.mat-expansion-panel-header {
+	padding: 0 12px !important;
+	height: 40px!important;
+	text-decoration: none;
+	background-color: #f9fafc !important;
+	position: relative !important;
+	border: none;
+    border-bottom: 1px solid #d1dce6;
+}
+div.mat-expansion-panel-content:not(.mat-expanded) {
+    height: 0px !important;
+    visibility: hidden !important;
+}
+
+.mat-expansion-indicator {
+	position: absolute;
+	left: 8px;
+	
+}
+.mat-expansion-indicator::after {	
+    content:"\F0D7"!important;
+	border:0!important;
+	font-family: 'FontAwesome';
+    -webkit-transform: unset!important;
+    transform: unset!important;
+    
+}
+.mat-expanded .mat-expansion-indicator::after {	
+    content:"\F0DA"!important;
+	border:0!important;
+	font-family: 'FontAwesome';
+    -webkit-transform: unset!important;
+    transform: unset!important;
+    
+}
+.mat-expanded .mat-expansion-indicator {
+	
+	-webkit-transform: unset!important;
+    transform: unset!important;
+}
+.mat-expansion-panel-header .mat-content {
+	padding-left: 16px;
+	font-size: 14px;
+}
+.mat-expansion-panel-spacing {
+    margin: 0!important;
+}
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: unset!important;
 }

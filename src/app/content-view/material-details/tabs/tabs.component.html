@@ -4,7 +4,7 @@
       General
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-general></t-general>
+      <t-general [edit]="editMode"></t-general>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -17,23 +17,20 @@
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
-      Segments
-    </ng-template>
-    <perfect-scrollbar class="container">
-      <t-segments></t-segments>
-    </perfect-scrollbar>
-  </mat-tab>
-  <mat-tab>
-    <ng-template mat-tab-label>
       Images
     </ng-template>
     <perfect-scrollbar class="container">
       <t-images></t-images>
     </perfect-scrollbar>
   </mat-tab>
-  <mat-tab>
+  <mat-tab mat-no-pagination="true">
     <ng-template mat-tab-label>
       Attachments
+      <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Add</button>
+        
+      </mat-menu>
     </ng-template>
     <perfect-scrollbar class="container">
       <t-attachments></t-attachments>
@@ -42,9 +39,21 @@
   <mat-tab>
     <ng-template mat-tab-label>
       Tech Attributes
+      <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Add</button>        
+      </mat-menu>
     </ng-template>
     <perfect-scrollbar class="container">
       <t-techAttr></t-techAttr>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Audio Programs
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <app-audio-program></app-audio-program>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>

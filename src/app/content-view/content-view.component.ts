@@ -7,10 +7,15 @@ import { MaterialDetailsComponent } from './material-details/material-details.co
   styleUrls: ['./content-view.component.css']
 })
 export class ContentViewComponent implements OnInit {
+  editMode: boolean;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onEdit(mode) {
+    this.editMode = mode;
   }
 
   // @ViewChild(MaterialDetailsComponent) materialDetails:MaterialDetailsComponent;

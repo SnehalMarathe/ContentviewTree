@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 't-general',
@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general.component.css']
 })
 export class GeneralComponent implements OnInit {
-toggle: boolean = true;
+
+  @Input('edit') toggle: boolean = false;
+
   constructor() { }
 
-  toggleEdit() {
-    this.toggle = !this.toggle;
-  }
+
 
   ngOnInit() {
   }

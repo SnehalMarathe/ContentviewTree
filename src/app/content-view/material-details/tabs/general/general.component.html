@@ -1,19 +1,18 @@
 
-   <button class="pull-right vms-icon-button" (click)="toggleEdit()" mat-button> <i class="fa fa-pencil"></i> Edit </button>
- 
+    
   <div class="ui-g">
       <div class="ui-g-6">
           <div class="ui-inputgroup field__single">
               <label class="field__label">Barcode</label>
-              <span  class="field__value" [hidden]=false>87340822</span>
-              <input [(ngModel)]="toggleEdit" class="field__value--editable" type="text" [hidden]=true pInputText placeholder="87340822" >
+              <span  class="field__value" [hidden]="toggle">87340822</span>
+              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput  placeholder="87340822" >
           </div>
       </div>
       <div class="ui-g-6">
           <div class="ui-inputgroup field__single">
               <label class="field__label">Parent Barcode</label>
               <span class="field__value" [hidden]=false>87340822</span>
-              <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="87340822">
+              <input  class="field__value--editable" type="text" [hidden]=true pInputText placeholder="87340822">
           </div>
       </div>
   </div>

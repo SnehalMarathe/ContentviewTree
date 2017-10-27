@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-title.component.css']
 })
 export class ContentTitleComponent implements OnInit {
-  toggle: boolean = true;
+  toggle: boolean;
+
+  @Output() edit: EventEmitter<boolean> = new EventEmitter(false);
+
+
   constructor() { }
-  toggleEdit() {
-    this.toggle = !this.toggle;
+
+
+  toggleEdit(e) {
+    this.edit.emit(this.toggle = !this.toggle);
   }
+
+
   ngOnInit() {
   }
 

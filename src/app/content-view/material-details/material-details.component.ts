@@ -1,15 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-// import { MaterialTabsComponent } from './material-tabs/material-tabs.component';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'material-details',
   templateUrl: './material-details.component.html',
   styleUrls: ['./material-details.component.css'],
-  host: {'style' : 'height: 100%'}
+  host: { 'style': 'height: 100%' }
 })
 export class MaterialDetailsComponent implements OnInit {
-
-  constructor() {}
+  @Input('edit') editMode: boolean = false;
+  
+  constructor() { }
 
   ngOnInit() {
   }
