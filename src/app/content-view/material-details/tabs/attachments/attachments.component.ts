@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 't-attachments',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./attachments.component.css']
 })
 export class AttachmentsComponent implements OnInit {
-
+@Input('edit') toggle: boolean = false;
   constructor() { }
 
   ngOnInit() {

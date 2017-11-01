@@ -23,7 +23,7 @@ html {
 html, body, app-root, .h-full-height {
 	position: relative;
 	display: block;
-	height: 100%;
+	height: 99%;
 }
 .h-preview__thumbnail {
 	display: block;
@@ -167,13 +167,15 @@ horizontal-split-separator .handle, .v-outer vertical-split-separator .handle {
 	text-align: left;
 	min-width: initial;
 }
-input.field__value--editable {
+input.field__value--editable, textarea.field__value--editable {
 	border: 1px solid #D2DCE6;
 	border-radius: 2px;
 	padding: 5px 8px;
 	margin-top: -6px;
 	font-size: 14px;
 	color: #333A44;
+	resize: none;
+	width:100%;
 }
 /* <-- EndOf Form Controls */
 /* --> Form Controls */
@@ -251,7 +253,7 @@ material-general {
 	padding: 8px;
 }
 .field__multi-line span {
-	display: block;
+	
 	min-height: 58px;
 }
 /* endOf Clips */
@@ -265,6 +267,10 @@ material-general {
 }
 .material-images__accordion .descriptive__data .field__label {
 	min-width: 232px;
+}
+
+.vms-list li {
+    list-style-type: none;
 }
 /* end of images  */
 /* --> Notes  */

@@ -86,3 +86,18 @@ div.mat-expansion-panel-content:not(.mat-expanded) {
 .mat-expansion-panel:not([class*=mat-elevation-z]) {
     box-shadow: unset!important;
 }
+.mat-expansion-panel-body{
+	margin:0!important;
+}
+/*dropdown menu*/
+.cdk-overlay-pane{
+	top: 80px!important;
+}
+.mat-menu-content {
+    padding-top: 4px!important;
+    padding-bottom: 4px!important;
+}
+.mat-menu-item {
+    height:25px!important;
+    line-height:25px!important;
+}

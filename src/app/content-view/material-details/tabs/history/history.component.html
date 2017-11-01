@@ -1,54 +1,22 @@
- 
-  <div class="example-container mat-elevation-z8">
-  <mat-table #table [dataSource]="dataSource">
+<div>
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="submittedon">
-      <mat-header-cell *matHeaderCellDef> Submitted On</mat-header-cell>
-      <mat-cell *matCellDef="let element"> 
-          <span class="date">{{ element.submittedon.date }}</span>
-          <span class="time">{{ element.submittedon.time }}</span>  
-      </mat-cell>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="workorder">
-      <mat-header-cell *matHeaderCellDef> Work Order # </mat-header-cell>
-      <mat-cell *matCellDef="let element"> 
-         <a class="vms-link" href="javascript:;">{{element.workorder}}</a>
-      </mat-cell>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="status">
-      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
-      <mat-cell *matCellDef="let element">
-        <span class="vms-status {{element.status.toLowerCase()}}">{{ element.status }}</span>
-      </mat-cell>
-    </ng-container>
-
-    <!-- Color Column -->
-    <ng-container matColumnDef="submittedby">
-      <mat-header-cell *matHeaderCellDef> Submitted By </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.submittedby}} </mat-cell>
-    </ng-container>
-<!-- Weight Column -->
-    <ng-container matColumnDef="workflow">
-      <mat-header-cell *matHeaderCellDef> Workflow </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.workflow}} </mat-cell>
-    </ng-container>
-
-    <!-- Color Column -->
-    <ng-container matColumnDef="task">
-      <mat-header-cell *matHeaderCellDef> Task </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.task}} </mat-cell>
-    </ng-container>
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
+  <ngx-datatable class="material" [rows]="rows" [columns]="columns" [columnMode]="'force'" 
+  [headerHeight]="50" [footerHeight]="50">
+   
+  <ngx-datatable-row-detail #myDetailRow (toggle)="onDetailToggle($event)">
+  <ng-template name="submittedon" let-row="row">
+    <span class="date">{{ row.submittedon.date }}</span>
+    <span class="time">{{ row.submittedon.time }}</span>
+  </ng-template>
+  <ng-template name="workorder" let-row="row">
+    <a class="vms-link" href="javascript:;">{{row.workorder}}</a>
+  </ng-template>
+  <ng-template name="status" let-row="row">
+    <span class="vms-status {{element.status.toLowerCase()}}">{{ row.status }}</span>
+  </ng-template>
+  <ng-template name="submittedby" let-row="row"> {{row.submittedby}}</ng-template>
+  <ng-template name="workflow" let-row="row"> {{row.workflow}}</ng-template>
+  <ng-template name="task" let-row="row">{{row.task}}</ng-template>
+  </ngx-datatable-row-detail>
+  </ngx-datatable>
 </div>
- 

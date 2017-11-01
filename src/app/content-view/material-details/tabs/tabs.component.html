@@ -12,7 +12,7 @@
       Clips
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-clips></t-clips>
+      <t-clips [edit]="editMode"></t-clips>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -20,7 +20,7 @@
       Images
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-images></t-images>
+      <t-images [edit]="editMode"></t-images>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab mat-no-pagination="true">
@@ -33,7 +33,7 @@
       </mat-menu>
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-attachments></t-attachments>
+      <t-attachments [edit]="editMode"></t-attachments>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -45,7 +45,7 @@
       </mat-menu>
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-techAttr></t-techAttr>
+      <t-techAttr [edit]="editMode"></t-techAttr>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -53,7 +53,7 @@
       Audio Programs
     </ng-template>
     <perfect-scrollbar class="container">
-      <app-audio-program></app-audio-program>
+      <app-audio-program [edit]="editMode"></app-audio-program>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -61,7 +61,7 @@
       History
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-history></t-history>
+      <t-history [edit]="editMode"></t-history>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -69,7 +69,7 @@
       Notes
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-notes></t-notes>
+      <t-notes [edit]="editMode"></t-notes>
     </perfect-scrollbar>
   </mat-tab>
 </mat-tab-group>

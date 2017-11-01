@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-audio-program',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./audio-program.component.css']
 })
 export class AudioProgramComponent implements OnInit {
-
+@Input('edit') toggle: boolean = false;
   constructor() { }
 
   ngOnInit() {

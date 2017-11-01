@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 't-clips',
@@ -6,22 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clips.component.css']
 })
 export class ClipsComponent implements OnInit {
-  step = 0;
+  
+  @Input('edit') toggle: boolean = false;
 
-  setStep(index: number) {
-    this.step = index;
-  }
-
-  nextStep() {
-    this.step++;
-  }
-
-  prevStep() {
-    this.step--;
-  }
   constructor() { }
 
   ngOnInit() {
   }
-
 }

@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatTabsModule, MatExpansionModule, MatTableModule, MatMenuModule, MatButtonModule } from '@angular/material';
+// UI Interactions
+import { MatTabsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+// App Components
 import { TabsComponent } from './tabs.component';
 import { GeneralComponent } from './general/general.component';
 import { ClipsComponent } from './clips/clips.component';
@@ -26,13 +29,18 @@ import { NotesComponent } from './notes/notes.component';
         NotesComponent
     ],
     imports: [
+       // Angular -
         FormsModule,
+        // UI Interactions
         MatTabsModule, 
         MatExpansionModule,
         PerfectScrollbarModule,
         MatTableModule,
         MatButtonModule,
-        MatMenuModule
+        MatMenuModule,
+        MatCheckboxModule,
+        MatSlideToggleModule,
+        NgxDatatableModule
     ],
     exports: [
         TabsComponent

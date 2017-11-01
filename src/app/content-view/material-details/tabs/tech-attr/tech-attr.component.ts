@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 't-techAttr',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tech-attr.component.css']
 })
 export class TechAttrComponent implements OnInit {
-
+@Input('edit') toggle: boolean = false;
   constructor() { }
 
   ngOnInit() {
