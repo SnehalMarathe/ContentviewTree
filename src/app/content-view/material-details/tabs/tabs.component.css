@@ -1,0 +1,20 @@
+/*data table related changes*/
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell{
+	background-color: #dee3ea;
+    border-width: 0!important;
+    color: #132841;
+    font-size: 14px!important;
+    padding: 12px 8px;
+    text-align: left;
+    font-weight: 500!important;
+}
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    
+    padding: 8px;
+    vertical-align: middle;
+    
+}
+.ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover {
+    border: 1px solid #1bbae1;
+    background: #fff;
+}

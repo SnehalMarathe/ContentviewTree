@@ -1,0 +1,13 @@
+
+/* General */
+material-general {
+	display: block;
+	padding-top: 4px;
+	background: #fff;
+	height: 100%;
+}
+.vms-window__overflow {
+	overflow: auto;
+	height: 100%;
+}
+/* endOf General */

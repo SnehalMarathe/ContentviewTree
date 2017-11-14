@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ITreeOptions, IActionMapping } from 'angular-tree-component';
-
+import { ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-tree',
   templateUrl: './tree.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./tree.component.css']
 })
 

@@ -1,0 +1,33 @@
+<div class="table-container">
+  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="60" [scrollbarV]="true"
+    [scrollbarH]="true">
+    <!--(toggle)="onDetailToggle($event)"-->
+    <ngx-datatable-column prop="Group">
+      <ng-template name="group" let-row="row" ngx-datatable-cell-template>
+        {{row.group}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Restriction">
+      <ng-template name="restriction" let-row="row" ngx-datatable-cell-template>
+        {{row.restriction}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Rule">
+      <ng-template name="rule" let-row="row" ngx-datatable-cell-template> {{row.rule}}</ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Rule Expires">
+      <ng-template name="ruleexpires" let-row="row" ngx-datatable-cell-template> {{row.ruleexpires}}</ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Updated">
+      <ng-template name="updated" let-row="row" ngx-datatable-cell-template>
+        <span class="date">{{ row.updated.date }}</span>
+        <span class="time">{{ row.updated.time }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Updated By">
+      <ng-template name="updatedby" let-row="row" ngx-datatable-cell-template>
+        {{ row.updatedby }}
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

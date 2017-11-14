@@ -1,3 +1,27 @@
- 
-  attachments works!
-
+<div class="table-container">
+  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="60"
+    [scrollbarV]="true" [scrollbarH]="true">
+    <!--(toggle)="onDetailToggle($event)"-->
+    <ngx-datatable-column prop="Description">
+      <ng-template name="description" let-row="row" ngx-datatable-cell-template>
+        {{row.description}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="File Name">
+      <ng-template name="filename" let-row="row" ngx-datatable-cell-template>
+        {{row.filename}}
+      </ng-template>
+    </ngx-datatable-column>   
+    <ngx-datatable-column prop="Added By">
+      <ng-template name="addedby" let-row="row" ngx-datatable-cell-template> {{row.addedby}}</ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Added On">
+      <ng-template name="addedon" let-row="row" ngx-datatable-cell-template> {{row.addedon}}</ng-template>
+    </ngx-datatable-column>    
+     <ngx-datatable-column name="Status" >
+      <ng-template name="status" let-row="row" ngx-datatable-cell-template>
+        <span class="vms-status {{row.status.toLowerCase()}}">{{ row.status }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

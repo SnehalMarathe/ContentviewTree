@@ -4,7 +4,7 @@ import { MaterialDetailsComponent } from './material-details/material-details.co
 @Component({
   selector: 'content-view',
   templateUrl: './content-view.component.html',
-  styleUrls: ['./content-view.component.css']
+  styleUrls: ['content-view.component.css']
 })
 export class ContentViewComponent implements OnInit {
   editMode: boolean;

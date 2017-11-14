@@ -1,0 +1,22 @@
+/*  Notes  */
+material-notes .vms-accordion__body {
+	padding: 10px 16px 12px;
+	border-bottom: 1px solid #d0dce6;
+}
+.vms-list li {
+	list-style-type: none;
+}
+.data__item {
+	border-top: 1px solid #d1dce6;
+	position: relative;
+}
+.data__item:first-child {
+	border-top: none;
+}
+.data__item:last-child {
+	border-bottom: 1px solid #d1dce6;
+}
+material-notes .vms-accordion {
+	height: 100%;
+}
+/* <-- endOf Notes */

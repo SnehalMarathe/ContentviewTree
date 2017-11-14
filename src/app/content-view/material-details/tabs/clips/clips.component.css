@@ -1,0 +1,41 @@
+/* Clips */
+.header-3 {
+	border-bottom: 1px solid #D2DCE6;
+	background-color: #F9FAFC;
+	padding: 7px 12px 8px;
+	line-height: 1;
+	position: relative;
+}
+.header-3__title {
+	color: #333A44;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 16px;
+	text-align: left;
+}
+
+.interactive__data {
+	position: absolute;
+	width: auto;
+	padding: 12px 0 6px 31px;
+	z-index: 1;
+	top: -4px;
+	left: 1px;
+}
+.descriptive__data {
+	width: calc(100% - 215px);
+	float: left;
+	position: relative;
+}
+.time-based__data {
+	max-width: 215px;
+	float: left;
+}
+.descriptive__data li, .time-based__data li {
+	padding: 8px;
+}
+.field__multi-line span {
+	
+	min-height: 58px;
+}
+/* endOf Clips */

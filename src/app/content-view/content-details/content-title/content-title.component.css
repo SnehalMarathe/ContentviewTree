@@ -1,0 +1,54 @@
+
+/* --> Content Details */
+content-title {
+	display: block;
+	margin-bottom: 8px;
+}
+/* <-- endOf Content Details */
+.vms-icon-button {
+	padding: 6px 16px;
+	border: 1px solid #CFD7E2!important;
+	border-radius: 3px!important;
+	background-color: #FFFFFF;
+	color: #616C7D!important;
+	font-size: 14px;
+	line-height:16px;
+	min-width:initial!important;
+}
+.vms-icon-button .ui-button-text {
+	padding-left: 12px;
+}
+.vms-icon-button:hover {	
+	
+	color: #616C7D!important;	
+}
+.vms-icon-button .mat-button-focus-overlay {	
+	background-color: #FFFFFF;
+	color: #616C7D!important;	
+	opacity:0!important;
+}
+.vms-icon-button i{
+	margin-right:4px;
+}
+.field__page-title {
+	width: calc(100% - 210px);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height:1.7;
+}
+.field__page-title ~ .vms-icon-button {
+    padding: 6px 14px;
+	line-height:16px;
+}
+.field__page-title .ui-button-icon-left {
+	left: .4em;
+}
+.field__page-title ~ .vms-icon-button .ui-button-icon-left{
+        margin-top: -.55em;
+}
+.field__page-title .field__value, .field__page-title .field__label {
+	font-size: 18px;
+	text-align: left;
+	min-width: initial;
+}

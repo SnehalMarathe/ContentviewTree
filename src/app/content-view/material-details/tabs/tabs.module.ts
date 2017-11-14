@@ -1,10 +1,13 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewEncapsulation } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // UI Interactions
-import { MatTabsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { MatTabsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 // App Components
 import { TabsComponent } from './tabs.component';
 import { GeneralComponent } from './general/general.component';
@@ -15,31 +18,35 @@ import { AttachmentsComponent } from './attachments/attachments.component';
 import { TechAttrComponent } from './tech-attr/tech-attr.component';
 import { HistoryComponent } from './history/history.component';
 import { NotesComponent } from './notes/notes.component';
-
 @NgModule({
-    declarations: [
-        TabsComponent, 
-        GeneralComponent, 
-        ClipsComponent, 
-        ImagesComponent, 
-        AudioProgramComponent, 
-        AttachmentsComponent, 
-        TechAttrComponent, 
-        HistoryComponent, 
-        NotesComponent
-    ],
-    imports: [
-       // Angular -
-        FormsModule,
-        // UI Interactions
-        MatTabsModule, 
+    exports: [
+        MatTabsModule,
         MatExpansionModule,
-        PerfectScrollbarModule,
         MatTableModule,
         MatButtonModule,
         MatMenuModule,
         MatCheckboxModule,
-        MatSlideToggleModule,
+        MatSlideToggleModule],
+})
+export class MaterialModule { }
+@NgModule({
+    declarations: [
+        TabsComponent,
+        GeneralComponent,
+        ClipsComponent,
+        ImagesComponent,
+        AudioProgramComponent,
+        AttachmentsComponent,
+        TechAttrComponent,
+        HistoryComponent,
+        NotesComponent
+    ],
+    imports: [
+        // Angular -
+        FormsModule,
+        // UI Interactions 
+        MaterialModule,           
+        PerfectScrollbarModule,        
         NgxDatatableModule
     ],
     exports: [

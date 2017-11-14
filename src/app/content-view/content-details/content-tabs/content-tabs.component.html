@@ -1,3 +1,80 @@
-<div class="card h-full-height">
-    content-tabs Comes here!
-</div>
+<mat-tab-group class="card" #myTabGroup>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      General
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <t-general [edit]="editMode"></t-general>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Episode
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <episode [edit]="editMode"></episode>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Keywords
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <keywords [edit]="editMode"></keywords>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Contributors
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <contributors [edit]="editMode"></contributors>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab mat-no-pagination="true">
+    <ng-template mat-tab-label>
+      Attachments
+      <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Add</button>
+
+      </mat-menu>
+    </ng-template>
+
+    <t-attachments [edit]="editMode"></t-attachments>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Audio Programs
+    </ng-template>
+
+    <app-audio-program [edit]="editMode"></app-audio-program>
+
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Notes
+    </ng-template>
+    <perfect-scrollbar class="container">
+      <t-notes [edit]="editMode"></t-notes>
+    </perfect-scrollbar>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Details
+    </ng-template>
+
+    <details-tab [edit]="editMode"></details-tab>
+
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Security
+    </ng-template>
+
+    <security [edit]="editMode"></security>
+
+  </mat-tab>
+</mat-tab-group>

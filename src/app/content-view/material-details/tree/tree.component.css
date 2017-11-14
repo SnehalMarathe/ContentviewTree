@@ -1,0 +1,129 @@
+.angular-tree-component {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	color: #333a44;
+}
+.toggle-children-wrapper-collapsed .toggle-children:before {
+	content: "\F0DA";
+	color: #616c7d;
+	font-size: 14px;
+	width: 16px;
+	background: none;
+	position: relative;
+	z-index: 2;
+	height: 20px;
+	font-family: FontAwesome;
+	line-height: 1.5;
+	left: 0;
+}
+.toggle-children-wrapper-expanded .toggle-children:before {
+	content: "\F0D7";
+	color: #616c7d;
+	font-size: 14px;
+	width: 16px;
+	background: none;
+	position: relative;
+	z-index: 2;
+	height: 20px;
+	font-family: FontAwesome;
+	line-height: 1.5;
+	left: 0;
+}
+.toggle-children-wrapper-expanded .toggle-children {
+	-webkit-transform: none!important;
+	transform: none!important;
+}
+.toggle-children {
+	background: none!important;
+	top: 3px;
+	width: 10px;
+	height: 15px;
+}
+
+tree-viewport{
+	overflow: unset;
+}
+.tree {
+	height: 100%;
+}
+.tree-node-level-1{
+	border-left:0!important;
+}
+tree-node-expander {
+    
+    width: 14px!important;
+	min-width: 14px!important;
+	max-width: 14px!important;
+}
+.tree-node {
+	border-left: 1px solid #d2dce6;
+}
+.node-content-wrapper-active, .node-content-wrapper-focused, .node-content-wrapper:hover {
+	box-shadow: none;
+}
+.node-content-wrapper {
+	padding: 4px 6px!important;
+	width:100%;
+}
+.node-content-wrapper:hover {
+	background: none;
+}
+.node-wrapper {
+	border: 1px solid #ffffff;
+	transition: .2s ease-out all;
+	width: 100%;
+	padding-left:13px!important;
+}
+.node-wrapper:hover {
+	border: 1px solid #1bbae1;
+}
+.toggle-children-wrapper {
+	padding: 2px 3px 5px 3px;
+}
+.mat-tree-options {
+	vertical-align: middle;
+    padding-left: 8px;
+    display: inline-block;
+    width: 94%;
+}
+.node-content-wrapper .mat-checkbox {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2px;
+}
+
+.material-type {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #333A44;
+}
+.material-file {
+	opacity: 0.7;
+	color: #333A44;
+	font-size: 11px;
+	line-height: 12px;
+	display: block;
+	font-weight: normal;
+	width:100%;
+	word-break: break-all;
+}
+.material-file:hover {
+	opacity: 1;
+}
+
+.cdk-visually-hidden {
+	border: 0;
+	clip: unset;
+	height: 14px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 14px;
+	opacity: 0;
+	left: 0!important;
+}

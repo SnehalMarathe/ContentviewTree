@@ -1,22 +1,32 @@
-<div>
+<div class="table-container">
+  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="60"
+    [scrollbarV]="true" [scrollbarH]="true">
+    <!--(toggle)="onDetailToggle($event)"-->
 
-  <ngx-datatable class="material" [rows]="rows" [columns]="columns" [columnMode]="'force'" 
-  [headerHeight]="50" [footerHeight]="50">
-   
-  <ngx-datatable-row-detail #myDetailRow (toggle)="onDetailToggle($event)">
-  <ng-template name="submittedon" let-row="row">
-    <span class="date">{{ row.submittedon.date }}</span>
-    <span class="time">{{ row.submittedon.time }}</span>
-  </ng-template>
-  <ng-template name="workorder" let-row="row">
-    <a class="vms-link" href="javascript:;">{{row.workorder}}</a>
-  </ng-template>
-  <ng-template name="status" let-row="row">
-    <span class="vms-status {{element.status.toLowerCase()}}">{{ row.status }}</span>
-  </ng-template>
-  <ng-template name="submittedby" let-row="row"> {{row.submittedby}}</ng-template>
-  <ng-template name="workflow" let-row="row"> {{row.workflow}}</ng-template>
-  <ng-template name="task" let-row="row">{{row.task}}</ng-template>
-  </ngx-datatable-row-detail>
+    <ngx-datatable-column prop="Submitted On">
+      <ng-template name="submittedon" let-row="row" ngx-datatable-cell-template>
+        <span class="date">{{ row.submittedon.date }}</span>
+        <span class="time">{{ row.submittedon.time }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Workorder">
+      <ng-template name="workorder" let-row="row" ngx-datatable-cell-template>
+        <a class="vms-link" href="javascript:;">{{row.workorder}}</a>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Status" >
+      <ng-template name="status" let-row="row" ngx-datatable-cell-template>
+        <span class="vms-status {{row.status.toLowerCase()}}">{{ row.status }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Submitted by">
+      <ng-template name="submittedby" let-row="row" ngx-datatable-cell-template> {{row.submittedby}}</ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Workflow">
+      <ng-template name="workflow" let-row="row"> {{row.workflow}}</ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Task">
+      <ng-template name="task" let-row="row">{{row.task}}</ng-template>
+    </ngx-datatable-column>
   </ngx-datatable>
 </div>

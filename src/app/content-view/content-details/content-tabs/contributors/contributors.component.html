@@ -1,0 +1,15 @@
+<div class="table-container">
+  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="40"
+    [scrollbarV]="true" [scrollbarH]="true">
+    <!--(toggle)="onDetailToggle($event)"-->
+    
+    <ngx-datatable-column name="Artists">
+      <ng-template name="artists" let-row="row"> 
+       <a class="vms-link" href="javascript:;"> {{row.artists}} </a>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Role">
+      <ng-template name="role" let-row="row">{{row.role}}</ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+</div>

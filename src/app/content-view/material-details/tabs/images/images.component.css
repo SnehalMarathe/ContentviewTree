@@ -1,0 +1,17 @@
+
+/* images */
+.material-images__accordion .interactive__data li:first-child {
+	margin-top: 18px;
+	margin-right: 4px;
+}
+.material-images__accordion .preview__thumbnail-item {
+	position: relative;
+}
+.material-images__accordion .descriptive__data .field__label {
+	min-width: 232px;
+}
+
+.vms-list li {
+    list-style-type: none;
+}
+/* end of images  */
