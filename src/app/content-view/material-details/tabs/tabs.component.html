@@ -26,11 +26,12 @@
   <mat-tab mat-no-pagination="true">
     <ng-template mat-tab-label>
       Attachments
-      <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Add</button>
-        
+      
+        <button mat-button [matMenuTriggerFor]="matAttachment"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+         <mat-menu #matAttachment="matMenu">
+        <button mat-menu-item>Add</button>        
       </mat-menu>
+     
     </ng-template>
     
       <t-attachments [edit]="editMode"></t-attachments>
@@ -39,9 +40,9 @@
   <mat-tab>
     <ng-template mat-tab-label>
       Tech Attributes
-      <button mat-button [matMenuTriggerFor]="menu"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Add</button>        
+      <button mat-button [matMenuTriggerFor]="matTechAttr"><i class="fa fa-sort-desc" aria-hidden="true"></i></button>
+      <mat-menu #matTechAttr="matMenu">
+        <button mat-menu-item>Show History</button>        
       </mat-menu>
     </ng-template>
    

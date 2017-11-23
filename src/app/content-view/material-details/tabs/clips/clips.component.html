@@ -37,66 +37,10 @@
                         <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                     </div>
                 </li>
-                <li class="data__description">
-                    <div class="ui-inputgroup field__single field__multi-line">
-                        <label class="field__label">Description</label>
-                        <span class="field__value" [hidden]="toggle">The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas &amp; Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard</span>
-                        <textarea class="field__value--editable" *ngIf="toggle" matInput placeholder="The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas & Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard Awa-…"></textarea>
-                    </div>
-                </li>
-            </ul>
-            <ul class="vms-list time-based__data">
-                <li class="data__dsid">
+                 <li class="data__created-by">
                     <div class="ui-inputgroup field__single">
-                        <label class="field__label">DSID</label>
-                        <span class="field__value" [hidden]="toggle">HDMBCAF697P1P</span>
-                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="HDMBCAF697P1P">
-                    </div>
-                </li>
-                <li class="data__time-in">
-                    <div class="ui-inputgroup field__single">
-                        <label class="field__label">Time In</label>
-                        <span class="field__value" [hidden]="toggle">01:07:25;16</span>
-                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="01:07:25;16">
-                    </div>
-                </li>
-                <li class="data__time-out">
-                    <div class="ui-inputgroup field__single">
-                        <label class="field__label">Time Out</label>
-                        <span class="field__value" [hidden]="toggle">01:15:04;14</span>
-                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="01:15:04;14">
-                    </div>
-                </li>
-                <li class="data__duration">
-                    <div class="ui-inputgroup field__single">
-                        <label class="field__label">Duration</label>
-                        <span class="field__value" [hidden]="toggle">00:07:38;29</span>
-                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="00:07:38;29">
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="data__item clearfix">
-            <ul class="vms-list interactive__data clearfix">
-                <li class="pull-left">
-                    <mat-checkbox name="" value="All Session(s)" label="" inputId="allSessions"></mat-checkbox>
-                </li>
-                <li class="pull-left">
-                    <a href="javascript:;" class="action-btn action__play"><i class="fa fa-play"></i></a>
-                </li>
-            </ul>
-            <ul class="vms-list descriptive__data">
-                <li class="data__title">
-                    <div class="ui-inputgroup field__single">
-                        <label class="field__label">Title</label>
-                        <span class="field__value" [hidden]="toggle">CATFISH Regular (Clean Content)</span>
-                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="CATFISH Regular (Clean Content)">
-                    </div>
-                </li>
-                <li class="data__created-by">
-                    <div class="ui-inputgroup field__single">
-                        <label class="field__label">Created By</label>
-                        <span class="field__value" [hidden]="toggle">N/A Workflow Service Mgr</span>
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
                         <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                     </div>
                 </li>
@@ -160,6 +104,83 @@
                     <div class="ui-inputgroup field__single">
                         <label class="field__label">Created By</label>
                         <span class="field__value" [hidden]="toggle">N/A Workflow Service Mgr</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
+                 <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
+                <li class="data__description">
+                    <div class="ui-inputgroup field__single field__multi-line">
+                        <label class="field__label">Description</label>
+                        <span class="field__value" [hidden]="toggle">The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas &amp; Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard</span>
+                        <textarea class="field__value--editable" *ngIf="toggle" matInput placeholder="The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas & Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard Awa-…"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <ul class="vms-list time-based__data">
+                <li class="data__dsid">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">DSID</label>
+                        <span class="field__value" [hidden]="toggle">HDMBCAF697P1P</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="HDMBCAF697P1P">
+                    </div>
+                </li>
+                <li class="data__time-in">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Time In</label>
+                        <span class="field__value" [hidden]="toggle">01:07:25;16</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="01:07:25;16">
+                    </div>
+                </li>
+                <li class="data__time-out">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Time Out</label>
+                        <span class="field__value" [hidden]="toggle">01:15:04;14</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="01:15:04;14">
+                    </div>
+                </li>
+                <li class="data__duration">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Duration</label>
+                        <span class="field__value" [hidden]="toggle">00:07:38;29</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="00:07:38;29">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="data__item clearfix">
+            <ul class="vms-list interactive__data clearfix">
+                <li class="pull-left">
+                    <mat-checkbox name="" value="All Session(s)" label="" inputId="allSessions"></mat-checkbox>
+                </li>
+                <li class="pull-left">
+                    <a href="javascript:;" class="action-btn action__play"><i class="fa fa-play"></i></a>
+                </li>
+            </ul>
+            <ul class="vms-list descriptive__data">
+                <li class="data__title">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Title</label>
+                        <span class="field__value" [hidden]="toggle">CATFISH Regular (Clean Content)</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="CATFISH Regular (Clean Content)">
+                    </div>
+                </li>
+                <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Created By</label>
+                        <span class="field__value" [hidden]="toggle">N/A Workflow Service Mgr</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
+                 <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
                         <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                     </div>
                 </li>
@@ -236,6 +257,13 @@
                             <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                         </div>
                     </li>
+                     <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
                     <li class="data__description">
                         <div class="ui-inputgroup field__single field__multi-line">
                             <label class="field__label">Description</label>
@@ -299,6 +327,13 @@
                             <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                         </div>
                     </li>
+                     <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
                     <li class="data__description">
                         <div class="ui-inputgroup field__single field__multi-line">
                             <label class="field__label">Description</label>
@@ -362,6 +397,13 @@
                             <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
                         </div>
                     </li>
+                     <li class="data__created-by">
+                    <div class="ui-inputgroup field__single">
+                        <label class="field__label">Output Name</label>
+                        <span class="field__value" [hidden]="toggle">Output name appears here</span>
+                        <input class="field__value--editable" type="text" *ngIf="toggle" matInput placeholder="N/A Workflow Service Mgr">
+                    </div>
+                </li>
                     <li class="data__description">
                         <div class="ui-inputgroup field__single field__multi-line">
                             <label class="field__label">Description</label>

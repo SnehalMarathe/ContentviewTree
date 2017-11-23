@@ -4,7 +4,7 @@
       General
     </ng-template>
     <perfect-scrollbar class="container">
-      <t-general [edit]="editMode"></t-general>
+      <content-general [edit]="editMode"></content-general>
     </perfect-scrollbar>
   </mat-tab>
   <mat-tab>
@@ -75,6 +75,14 @@
     </ng-template>
 
     <security [edit]="editMode"></security>
+
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Promo
+    </ng-template>
+
+    <promo [edit]="editMode"></promo>
 
   </mat-tab>
 </mat-tab-group>

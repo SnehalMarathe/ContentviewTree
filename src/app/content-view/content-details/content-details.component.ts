@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content-details',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-details.component.css']
 })
 export class ContentDetailsComponent implements OnInit {
+  
+@Input('edit') editMode: boolean = false;
 
   constructor() { }
 

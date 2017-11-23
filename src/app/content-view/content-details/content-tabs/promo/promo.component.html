@@ -3,17 +3,29 @@
     [scrollbarH]="true">
     <!--(toggle)="onDetailToggle($event)"-->
 
-    <ngx-datatable-column prop="DSID">
-      <ng-template name="dsid" let-row="row" ngx-datatable-cell-template>
-         <span [hidden]=toggle>{{row.dsid}}</span>
+    <ngx-datatable-column prop="Reel #">
+      <ng-template name="reel" let-row="row" ngx-datatable-cell-template>
+         <span [hidden]=toggle>{{row.reel}}</span>
          <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
       </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column prop="Episode #">
-      <ng-template name="episode" let-row="row" ngx-datatable-cell-template>
-       <span [hidden]=toggle> {{row.episode}}</span>
+    <ngx-datatable-column prop="Cut Position">
+      <ng-template name="cutposition" let-row="row" ngx-datatable-cell-template>
+       <span [hidden]=toggle> {{row.cutposition}}</span>
          <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
       </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Seq #">
+      <ng-template name="seq" let-row="row" ngx-datatable-cell-template> 
+        <span [hidden]=toggle>{{row.seq}}</span>
+         <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column prop="Program Name">
+       <ng-template name="programname" let-row="row" ngx-datatable-cell-template>
+        <span [hidden]=toggle>{{row.programname}}</span>
+         <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
+        </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="Title">
       <ng-template name="title" let-row="row" ngx-datatable-cell-template> 
@@ -22,14 +34,8 @@
         </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="Description">
-      <ng-template name="desc" let-row="row" ngx-datatable-cell-template> 
+      <ng-template name="desc" let-row="row" ngx-datatable-cell-template>
         <span [hidden]=toggle>{{row.desc}}</span>
-         <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
-        </ng-template>
-    </ngx-datatable-column>
-    <ngx-datatable-column prop="Program Name">
-      <ng-template name="programname" let-row="row" ngx-datatable-cell-template>
-        <span [hidden]=toggle>{{row.programname}}</span>
          <input *ngIf="toggle" class="field__value--editable" type="text" [value]="value" matInput/>
         </ng-template>
     </ngx-datatable-column>

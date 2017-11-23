@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {DataSource} from '@angular/cdk/collections';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+
 @Component({
   selector: 'contributors',
   templateUrl: './contributors.component.html',
@@ -9,6 +10,7 @@ import 'rxjs/add/observable/of';
 })
 export class ContributorsComponent {
 @Input('edit') toggle: boolean = false;
+
    getHeight(row: any, index: number): number {
   return row.someHeight;
 }
@@ -24,7 +26,11 @@ export class ContributorsComponent {
   { artists: 'Video-Crop Button (Pixels)', role: 'Artist', },
  
   ];
-  
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
   constructor() {    
      
   }

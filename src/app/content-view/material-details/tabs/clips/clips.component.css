@@ -39,3 +39,15 @@
 	min-height: 58px;
 }
 /* endOf Clips */
+.clip-count {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 18px;
+	right: 12px;
+}
+.count {
+	opacity: .5;
+}

@@ -1,15 +1,19 @@
-<div class="panel">
+<div class="panel" >
+     
     <div class="panel__header">
         Material Details
         <ul class="action__list pull-right ui-helper-reset ui-helper-clearfix">
-            <li class="pull-left"><a class="action-btn action__collection" href="javascript:;"><i class="fa fa-archive"></i></a></li>
+  
+            <li class="pull-left"><a class="action-btn action__collection" type="button" mat-button (click)="openSideNav($event)" ><i class="fa fa-archive"></i></a></li>
+             
             <li class="pull-left"><a class="action-btn action__cart" href="javascript:;"><i class="fa fa-shopping-cart"></i></a></li>
             <li class="pull-left"><a class="action-btn action__workorder" href="javascript:;"><i class="fa fa-rocket"></i></a></li>
             <li class="pull-left"><a class="action-btn action__share" href="javascript:;"><i class="fa fa-share-alt"></i></a></li>
             <li class="pull-left"><a class="action-btn action__download" href="javascript:;"><i class="fa fa-download"></i></a></li>
             <li class="pull-left"><a class="action-btn action__logger" href="javascript:;"><i class="fa fa-play"></i></a></li>
-            <li class="pull-left"><a class="action-btn action__collpaseL" href="javascript:;"><i class="fa fa-angle-left"></i></a></li>
+            <li class="pull-left"><a class="action-btn action__collpaseL" href="javascript:;" (click)="toggleCollapse($event)"><i class="fa fa-angle-left"></i></a></li>
         </ul>
+       
     </div>
     <div class="panel__body">
         
@@ -31,4 +35,5 @@
             </div>
             
     </div>
+   
 </div>

@@ -27,7 +27,11 @@ export class AudioProgramComponent {
   {startchannel: '1', layout: 'Stereo', language: 'English (United States)', censored: 'None', dubbed: 'None', music: 'None', effects: 'None', dvs: 'Yes', containsdialog: 'None', mos: 'None', active: 'None'}
   
   ];
-  
+   foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
   constructor() {    
      
   }

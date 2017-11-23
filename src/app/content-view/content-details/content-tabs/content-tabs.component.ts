@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'content-tabs',
@@ -6,8 +6,6 @@ import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
   styleUrls: ['./content-tabs.component.css']
 })
 export class ContentTabsComponent implements OnInit {
-
-  
   @Input('edit') editMode: boolean = false;
 
   constructor() { }

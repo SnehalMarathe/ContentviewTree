@@ -1,23 +1,25 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewEncapsulation } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 // UI Interactions
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { MatTabsModule, MatChipsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
+import { MatTabsModule, MatSelectModule, MatChipsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 // App Components
 import { ContentTabsComponent } from './content-tabs.component';
 import { GeneralComponent } from './general/general.component';
 import { AudioProgramComponent } from './audio-program/audio-program.component';
 import { AttachmentsComponent } from './attachments/attachments.component';
-import { TechAttrComponent } from './tech-attr/tech-attr.component';
-
 import { NotesComponent } from './notes/notes.component';
 import { EpisodeComponent } from './episode/episode.component';
 import { ContributorsComponent } from './contributors/contributors.component';
 import { KeywordsComponent } from './keywords/keywords.component';
 import { DetailsComponent } from './details/details.component';
 import { SecurityComponent } from './security/security.component';
+import { PromoComponent } from './promo/promo.component';
 @NgModule({
     exports: [
         MatTabsModule,
@@ -27,8 +29,10 @@ import { SecurityComponent } from './security/security.component';
         MatButtonModule,
         MatMenuModule,
         MatCheckboxModule,
-        MatSlideToggleModule],
-    
+        MatSelectModule,
+        MatSlideToggleModule,
+        ],
+       
 })
 export class MaterialModule { }
 @NgModule({
@@ -37,9 +41,13 @@ export class MaterialModule { }
         GeneralComponent,
         AudioProgramComponent,
         AttachmentsComponent,
-        TechAttrComponent,
         NotesComponent,
-        EpisodeComponent, ContributorsComponent, KeywordsComponent, DetailsComponent, SecurityComponent
+        EpisodeComponent, 
+        ContributorsComponent, 
+        KeywordsComponent, 
+        DetailsComponent, 
+        SecurityComponent,
+        PromoComponent
     ],
     imports: [
         // Angular -

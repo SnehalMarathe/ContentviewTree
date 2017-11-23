@@ -4,13 +4,23 @@
     <!--(toggle)="onDetailToggle($event)"-->
 <ngx-datatable-column prop="Attribute">
       <ng-template name="attribute" let-row="row" ngx-datatable-cell-template>
-        {{row.attribute}}
+       <span [hidden]=toggle> {{row.attribute}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>        
       </ng-template>
     </ngx-datatable-column>
    
     <ngx-datatable-column name="Value">
       <ng-template name="value" let-row="row" ngx-datatable-cell-template>
-       {{row.value}}
+      <span [hidden]=toggle> {{row.value}}</span>
+       <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>  
       </ng-template>
     </ngx-datatable-column>
      <ngx-datatable-column prop="Updated">
@@ -20,7 +30,9 @@
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="By">
-      <ng-template name="by" let-row="row" ngx-datatable-cell-template> {{row.by}}</ng-template>
+      <ng-template name="by" let-row="row" ngx-datatable-cell-template> 
+       {{row.by}}        
+      </ng-template>
     </ngx-datatable-column>    
   </ngx-datatable>
 </div>

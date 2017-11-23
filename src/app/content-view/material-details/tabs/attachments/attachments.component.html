@@ -1,15 +1,25 @@
 <div class="table-container">
-  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="60"
+  <ngx-datatable class="material" [rows]="rows" columnMode="force" [headerHeight]="40" [rowHeight]="getRowHeight"
     [scrollbarV]="true" [scrollbarH]="true">
     <!--(toggle)="onDetailToggle($event)"-->
     <ngx-datatable-column prop="Description">
       <ng-template name="description" let-row="row" ngx-datatable-cell-template>
-        {{row.description}}
+        <span [hidden]=toggle> {{row.description}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>  
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="File Name">
       <ng-template name="filename" let-row="row" ngx-datatable-cell-template>
-        {{row.filename}}
+         <span [hidden]=toggle>{{row.filename}}</span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>  
       </ng-template>
     </ngx-datatable-column>   
     <ngx-datatable-column prop="Added By">
@@ -21,6 +31,11 @@
      <ngx-datatable-column name="Status" >
       <ng-template name="status" let-row="row" ngx-datatable-cell-template>
         <span class="vms-status {{row.status.toLowerCase()}}">{{ row.status }}</span>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column  [width]="30" [frozenRight]="true" >
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <i class="fa fa-download"> </i>
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>

@@ -1,0 +1,115 @@
+/* --> Action bar */
+.action__list {
+	display: inline-block;
+	position: absolute;top: 0;
+	bottom: 0;
+	right: 8px;
+	height: 26px;
+	margin: auto;
+	right: 8px; /* When aligned to right */;
+	list-style-type: none;
+}
+.action__list li {
+	margin-left: 8px;
+}
+.action-btn {
+	color: #616C7D;
+	display: inline-block;
+	border: 1px solid #BCC6D5;
+	border-radius: 100px;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	opacity: 1;
+	position: relative;
+	transition: .2s ease-out all;
+	background-color: #fff;
+}
+.action__history {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 8px;
+	font-size: 14px;
+}
+.action__history i {
+	padding: 4px 2px;
+	font-size: 14px;
+}
+.action-btn:hover i {
+	color: #fff;
+}
+.action-btn.action-normal:hover i {
+	color: #616C7D;
+}
+.action-btn:hover {
+	opacity: 1;
+}
+.action__play {
+	margin-left: 4px;
+	margin-top: -2px;
+	position: absolute;
+	padding-top: .5px;
+}
+.action__cart i, .action__collection i, .action__delete i, .action__share i, .action__download i, .action__logger i, .action__collpaseL i {
+	font-size: 13px;
+	top: -1px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	height: 13px;
+}
+.action__workorder i, .action__cart i {
+	font-size: 14px!important;
+	height: 14px;
+}
+.action__workorder i {
+	position: absolute;
+	margin-top: 5px;
+	margin-left: -7px;
+}
+.action__play i {
+	font-size: 12px;
+	margin-left: 3px;
+	padding-top: 5px;
+	display: inline-block;
+}
+.action__cart:hover {
+	background-color: #F89C38;
+	border-color: #F89C38;
+}
+.action__collection:hover {
+	background-color: #3498db;
+	border-color: #3498db;
+}
+.action__workorder:hover {
+	background-color: #6ad2eb;
+	border-color: #6ad2eb;
+}
+.action__delete:hover {
+	background-color: #e74c3c;
+	border-color: #e74c3c;
+}
+.action__logger:hover {
+	background-color: #8F55B6;
+	border: 1px solid #6818BF;
+	color: white;
+}
+.action__download:hover {
+	background-color: #3A5795;
+	border-color: #3A5795;
+	color: #ffffff;
+}
+.action__share:hover {
+	background-color: #aad178;
+	border-color: #7db831;
+	color: #ffffff;
+}
+.action__collpaseL:hover i {
+	color: #333333;
+}
+/* <-- endOf action bar */

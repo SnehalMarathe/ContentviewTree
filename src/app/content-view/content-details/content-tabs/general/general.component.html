@@ -1,149 +1,114 @@
-   <div class="ui-g">
-      <div class="ui-g-6">
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Content Type</label>
+            <span class="field__value" [hidden]="toggle">87340822</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="87340822">
+        </div>
+    </div>
+    <div class="ui-g-6">
+        <div class="ui-g-6">
           <div class="ui-inputgroup field__single">
-              <label class="field__label">Barcode</label>
-              <span  class="field__value" [hidden]="toggle">87340822</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput  placeholder="87340822" >
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Parent Barcode</label>
-              <span class="field__value" [hidden]="toggle">87340822</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="87340822">
-          </div>
-      </div>
-  </div>
-
-  <div class="ui-g">
-      <div class="ui-g-12">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Rendition</label>
-              <span class="field__value" [hidden]="toggle">Archive Master</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="Archive Master">
-          </div>
-      </div>
-  </div>
-
-  <div class="ui-g">
-      <div class="ui-g-12">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Filename</label>
-              <span class="field__value" [hidden]="toggle">HDMBCAF6071P1P_E1T1.mxf</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="HDMBCAF6071P1P_E1T1.mxf">
-          </div>
-      </div>
-  </div>
-
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Format</label>
-              <span class="field__value" [hidden]="toggle">BS</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="BS">
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">MD5</label>
-              <span class="field__value" [hidden]="false">8f193ffce166b97cedad8253810af969</span>
-              <input  class="field__value--editable" type="text" [hidden]="true"  matInput placeholder="8f193ffce166b97cedad8253810af969">
-          </div>
-      </div>
-  </div>
-
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Standard</label>
-              <span class="field__value" [hidden]="toggle">NTSC</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="NTSC">
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Ingest Date</label>
-              <span class="field__value" [hidden]="false">05/05/2017 3:49:18 PM</span>
-              <input  [hidden]="true" class="field__value--editable" type="text"  matInput placeholder="05/05/2017 3:49:18 PM">
-          </div>
-      </div>
-  </div>
-
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Active</label>
+              <label class="field__label">Ready for Air</label>
               <mat-slide-toggle class="field__value" [hidden]="toggle"></mat-slide-toggle>
-              <!-- <p-inputSwitch class="field__value" onLabel="on" offLabel="off"></p-inputSwitch> -->
+              
           </div>
       </div>
       <div class="ui-g-6">
           <div class="ui-inputgroup field__single">
-              <label class="field__label">Frame Rate</label>
-              <span class="field__value" [hidden]="toggle">29.97</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="29.97">
+              <label class="field__label__small">RFD</label>
+              <mat-slide-toggle class="field__value" [hidden]="toggle"></mat-slide-toggle>
+             
           </div>
       </div>
-  </div>
+    </div>
+</div>
 
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Encoding Status</label>
-              <span class="field__value" [hidden]="toggle">Not Encoded</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="Not Encoded">
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Status</label>
-              <span class="field__value" [hidden]="toggle">IN</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="IN">
-          </div>
-      </div>
-  </div>
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Enter Date</label>
+            <span class="field__value" [hidden]="toggle">Archive Master</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="Archive Master">
+        </div>
+    </div>
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">DSID</label>
+            <span class="field__value" [hidden]="toggle">87340822</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="87340822">
+        </div>
+    </div>
+</div>
 
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Home Library</label>
-              <span class="field__value" [hidden]="toggle">Iron Mountain NJ</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="Iron Mountain NJ">
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Location</label>
-              <span class="field__value" [hidden]="toggle">None</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="None">
-          </div>
-      </div>
-  </div>
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Record Date</label>
+            <span class="field__value" [hidden]="toggle">HDMBCAF6071P1P_E1T1.mxf</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="HDMBCAF6071P1P_E1T1.mxf">
+        </div>
+    </div>
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Episode Version</label>
+            <span class="field__value" [hidden]="toggle">HDMBCAF6071P1P_E1T1.mxf</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="HDMBCAF6071P1P_E1T1.mxf">
+        </div>
+    </div>
+</div>
 
-  <div class="ui-g">
-      <div class="ui-g-12">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Shelf</label>
-              <span class="field__value" [hidden]="toggle">Archive Master</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="Archive Master">
-          </div>
-      </div>
-  </div>
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Promo Version</label>
+            <span class="field__value" [hidden]="toggle">BS</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="BS">
+        </div>
+    </div>
 
-  <div class="ui-g">
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Request #</label>
-              <span class="field__value" [hidden]="toggle">None</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="None">
-          </div>
-      </div>
-      <div class="ui-g-6">
-          <div class="ui-inputgroup field__single">
-              <label class="field__label">Ship Ticket #</label>
-              <span class="field__value" [hidden]="toggle">None</span>
-              <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="None">
-          </div>
-      </div>
-  </div>
+</div>
 
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Content Owner</label>
+            <span class="field__value" [hidden]="toggle">NTSC</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="NTSC">
+        </div>
+    </div>
+
+</div>
+
+<div class="ui-g">
+
+    <div class="ui-g-12">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Subject</label>
+            <span class="field__value" [hidden]="toggle">29.97</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="29.97">
+        </div>
+    </div>
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Channel</label>
+            <span class="field__value" [hidden]="toggle">Not Encoded</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="Not Encoded">
+        </div>
+    </div>
+
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-6">
+        <div class="ui-inputgroup field__single">
+            <label class="field__label">Premier Date</label>
+            <span class="field__value" [hidden]="toggle">Iron Mountain NJ</span>
+            <input *ngIf="toggle" class="field__value--editable" type="text" matInput placeholder="Iron Mountain NJ">
+        </div>
+    </div>
+
+</div>

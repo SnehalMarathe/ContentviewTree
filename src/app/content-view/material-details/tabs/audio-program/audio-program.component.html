@@ -6,56 +6,98 @@
     <ngx-datatable-column prop="Start Channel">
       <ng-template name="startchannel" let-row="row" ngx-datatable-cell-template>
         {{row.startchannel}}
+        
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="Layout">
       <ng-template name="layout" let-row="row" ngx-datatable-cell-template>
-        {{row.layout}}
+        <span [hidden]=toggle> {{row.layout}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="Language">
       <ng-template name="language" let-row="row" ngx-datatable-cell-template> 
-        {{row.language}}
+        <span [hidden]=toggle> {{row.language}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
         </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Censored">
-      <ng-template name="censored" let-row="row"> 
-        {{row.censored}}
+    <ngx-datatable-column prop="Censored">
+      <ng-template name="censored" let-row="row" ngx-datatable-cell-template>  
+        <span [hidden]=toggle> {{row.censored}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
         </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Dubbed">
-      <ng-template name="dubbed" let-row="row">
-        {{row.dubbed}}
+    <ngx-datatable-column prop="Dubbed">
+      <ng-template name="dubbed" let-row="row" ngx-datatable-cell-template>
+        <span [hidden]=toggle> {{row.dubbed}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
         </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="Music">
       <ng-template name="music" let-row="row" ngx-datatable-cell-template>
-        {{row.music}}
+        <span [hidden]=toggle> {{row.music}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="Effects">
       <ng-template name="effects" let-row="row" ngx-datatable-cell-template>
-        {{row.effects}}
+        <span [hidden]=toggle> {{row.effects}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column prop="DVS">
       <ng-template name="dvs" let-row="row" ngx-datatable-cell-template> 
-        {{row.dvs}}
+        <span [hidden]=toggle> {{row.dvs}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
         </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Contains Dialog">
-      <ng-template name="containsdialog" let-row="row"> 
+    <ngx-datatable-column prop="Contains Dialog">
+      <ng-template name="containsdialog" let-row="row" ngx-datatable-cell-template> 
         {{row.containsdialog}}
         </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="MOS">
-      <ng-template name="mos" let-row="row">
-        {{row.mos}}
+    <ngx-datatable-column prop="MOS">
+      <ng-template name="mos" let-row="row" ngx-datatable-cell-template>
+        <span [hidden]=toggle>{{row.mos}} </span>
+        <mat-select placeholder="Favorite food"  *ngIf="toggle" >
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>    
         </ng-template>
     </ngx-datatable-column>
-    <ngx-datatable-column name="Active">
-      <ng-template name="active" let-row="row">
-        {{row.active}}
+    <ngx-datatable-column prop="Active">
+      <ng-template name="active" let-row="row" ngx-datatable-cell-template>
+        <span [hidden]=toggle> {{row.active}} </span>
+        <mat-checkbox *ngIf="toggle" ></mat-checkbox>
         </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>

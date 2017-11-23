@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatTabsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
+import { MatTabsModule,  MatSidenavModule, MatSelectModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 // UI Interactions
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -24,8 +24,10 @@ import { AppRoutingModule } from './app-routing.module';
         MatMenuModule,
         MatCheckboxModule,
         MatButtonModule,
+        MatSelectModule,
+         MatSidenavModule
         ],
-})
+    })
 export class MaterialModule { }
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ export class MaterialModule { }
     ContentDetailsComponent,
     ContentViewComponent,
     ContentTitleComponent, 
-    ContentVideoComponent,     
+    ContentVideoComponent, 
+       
   ],
   imports: [
     // Angular -

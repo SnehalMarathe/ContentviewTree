@@ -1,4 +1,10 @@
 /*data table related changes*/
+.ngx-datatable{
+    height:309px;
+}
+.material-details .ngx-datatable{
+    height:160px;
+}
 .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell{
 	background-color: #dee3ea;
     border-width: 0!important;
@@ -12,6 +18,9 @@
     
     padding: 8px;
     vertical-align: middle;
+    color:#132841;
+    white-space:initial!important;
+    line-height: 16px;
     
 }
 .ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover {

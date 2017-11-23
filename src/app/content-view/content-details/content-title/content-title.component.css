@@ -30,12 +30,15 @@ content-title {
 .vms-icon-button i{
 	margin-right:4px;
 }
+.content-title-div{
+	margin-bottom:8px;
+}
 .field__page-title {
 	width: calc(100% - 210px);
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	line-height:1.7;
+	line-height:1.7!important;
 }
 .field__page-title ~ .vms-icon-button {
     padding: 6px 14px;

@@ -36,7 +36,11 @@ export class TechAttrComponent {
         { attribute: 'End Timecode', value: '00:02:49;28', updated: {date: '09/08/2016', time: '4:23:27 AM'}, by: 'Workflow Service' },
         { attribute: 'File Format', value: 'mxf', updated: {date: '09/08/2016', time: '4:23:27 AM'}, by: 'Workflow Service' }
   ];
-  
+  foods = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ];
   constructor() {    
      
   }

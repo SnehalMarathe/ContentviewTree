@@ -8,7 +8,7 @@ import { Component, OnInit, ViewChild, Input } from '@angular/core';
 })
 export class MaterialDetailsComponent implements OnInit {
   @Input('edit') editMode: boolean = false;
-  
+  @Input('collapse') collapseMode: boolean = false;
   constructor() { }
 
   ngOnInit() {

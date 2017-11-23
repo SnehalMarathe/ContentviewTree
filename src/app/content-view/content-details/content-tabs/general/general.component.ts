@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 't-general',
+  selector: 'content-general',
   templateUrl: './general.component.html',
   styleUrls: ['./general.component.css']
 })

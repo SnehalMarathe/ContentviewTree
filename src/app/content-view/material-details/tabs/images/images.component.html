@@ -2,7 +2,7 @@
     <span class="header-3__title">
         <mat-checkbox name="" value="All - 1 Image(s)" label="All - 1 Image(s)" inputId="allImages"> All - 1 Image(s) </mat-checkbox>
     </span>
-    
+    <action-bar> </action-bar>
 </h3>
 <mat-accordion class=".vms-accordion material-images__accordion">
     <mat-expansion-panel>
@@ -14,39 +14,34 @@
         </mat-expansion-panel-header>
 <div class="vms-accordion__body clearfix">
             <div class="data__item clearfix">
-
                 <ul class="vms-list interactive__data clearfix">
-
                     <li class="pull-left" >
                         <mat-checkbox name="" value="All Session(s)" label="" inputId="allSessions"></mat-checkbox>
                     </li>
-
                     <li class="pull-left preview__thumbnail-item">
                         <a href="javascript:;" class="h-preview__thumbnail"><img src="" alt=""></a>
                     </li>
-
                 </ul>
-
                 <ul class="vms-list descriptive__data">
                     <li class="data__title">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">Title</label>
-                            <span class="field__value" [hidden]=false>CATFISH Regular (Clean Content)</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="CATFISH Regular (Clean Content)">
+                            <span class="field__value" [hidden]=toggle>CATFISH Regular (Clean Content)</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="CATFISH Regular (Clean Content)">
                         </div>
                     </li>
                     <li class="data__created-by">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">Created By</label>
-                            <span class="field__value" [hidden]=false>N/A Workflow Service Mgr</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="N/A Workflow Service Mgr">
+                            <span class="field__value" [hidden]=toggle>N/A Workflow Service Mgr</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="N/A Workflow Service Mgr">
                         </div>
                     </li>
                     <li class="data__description">
                         <div class="ui-inputgroup field__single field__multi-line">
                             <label class="field__label">Description</label>
-                            <span class="field__value" [hidden]=false>The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas &amp; Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas & Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard Awa-…">
+                            <span class="field__value" [hidden]=toggle>The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas &amp; Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="The 2016 MTV VMAs will air live on Sunday, August 28th from Madison Square Garden in NYC. Set to perform are Britney Spears, Nick Jonas & Ty Dolla $ign and Rihanna who will receive the 2016 Michael Jackson Video Vanguard Awa-…">
                         </div>
                     </li>
                 </ul>
@@ -54,29 +49,29 @@
                     <li class="data__dsid">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">DSID</label>
-                            <span class="field__value" [hidden]=false>HDMBCAF697P1P</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="HDMBCAF697P1P">
+                            <span class="field__value" [hidden]=toggle>HDMBCAF697P1P</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="HDMBCAF697P1P">
                         </div>
                     </li>
                     <li class="data__time-in">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">Time In</label>
-                            <span class="field__value" [hidden]=false>01:07:25;16</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="01:07:25;16">
+                            <span class="field__value" [hidden]=toggle>01:07:25;16</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="01:07:25;16">
                         </div>
                     </li>
                     <li class="data__time-out">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">Time Out</label>
-                            <span class="field__value" [hidden]=false>01:15:04;14</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="01:15:04;14">
+                            <span class="field__value" [hidden]=toggle>01:15:04;14</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="01:15:04;14">
                         </div>
                     </li>
                     <li class="data__duration">
                         <div class="ui-inputgroup field__single">
                             <label class="field__label">Duration</label>
-                            <span class="field__value" [hidden]=false>00:07:38;29</span>
-                            <input class="field__value--editable" type="text" [hidden]=true pInputText placeholder="00:07:38;29">
+                            <span class="field__value" [hidden]=toggle>00:07:38;29</span>
+                            <input *ngIf="toggle" class="field__value--editable" type="text"  matInput placeholder="00:07:38;29">
                         </div>
                     </li>
                 </ul>

@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { MatTabsModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
+import { MatTabsModule, MatSelectModule, MatExpansionModule, MatCheckboxModule, MatTableModule, MatMenuModule, MatButtonModule, MatSlideToggleModule } from '@angular/material';
 // App Components
 import { TabsComponent } from './tabs.component';
 import { GeneralComponent } from './general/general.component';
@@ -18,6 +18,8 @@ import { AttachmentsComponent } from './attachments/attachments.component';
 import { TechAttrComponent } from './tech-attr/tech-attr.component';
 import { HistoryComponent } from './history/history.component';
 import { NotesComponent } from './notes/notes.component';
+import { ActionBarComponent } from 'C:/Users/10610283/ContentviewTree/src/app/content-view/action-bar/action-bar.component';
+
 @NgModule({
     exports: [
         MatTabsModule,
@@ -26,6 +28,7 @@ import { NotesComponent } from './notes/notes.component';
         MatButtonModule,
         MatMenuModule,
         MatCheckboxModule,
+        MatSelectModule,
         MatSlideToggleModule],
 })
 export class MaterialModule { }
@@ -39,7 +42,8 @@ export class MaterialModule { }
         AttachmentsComponent,
         TechAttrComponent,
         HistoryComponent,
-        NotesComponent
+        NotesComponent,
+        ActionBarComponent
     ],
     imports: [
         // Angular -
