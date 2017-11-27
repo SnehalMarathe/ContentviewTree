@@ -39,6 +39,7 @@ content-title {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	line-height:1.7!important;
+	
 }
 .field__page-title ~ .vms-icon-button {
     padding: 6px 14px;
@@ -50,8 +51,14 @@ content-title {
 .field__page-title ~ .vms-icon-button .ui-button-icon-left{
         margin-top: -.55em;
 }
-.field__page-title .field__value, .field__page-title .field__label {
+.field__page-title .field__value{
 	font-size: 18px;
 	text-align: left;
 	min-width: initial;
+}
+.field__page-title .field__label {
+	font-size: 18px;
+	text-align: left;
+	min-width: initial;
+	line-height:1.8;
 }

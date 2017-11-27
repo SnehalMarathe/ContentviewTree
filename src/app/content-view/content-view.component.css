@@ -46,14 +46,15 @@ perfect-scrollbar>.ps.ps--active-y>.ps__rail-y{
 .field__value {
 	color: #333A44;
 	font-size: 14px;
-	line-height: 2;
+	line-height: 1.2;
 	padding-left: 8px;
 	word-break: break-all;
+	padding-top:6px;
 }
 .field__multi-line span.field__value {
 	line-height:1.5!important;
 }
-input.field__value--editable, textarea.field__value--editable {
+input.field__value--editable{
 	border: 1px solid #D2DCE6;
 	border-radius: 2px;
 	padding: 4px 8px;
@@ -65,7 +66,15 @@ input.field__value--editable, textarea.field__value--editable {
 	height:30px;
 }
  textarea.field__value--editable {
-	min-height:80px!important;
+	min-height:60px!important;
+	border: 1px solid #D2DCE6;
+	border-radius: 2px;
+	padding: 4px 8px;
+	margin-top: 0;
+	font-size: 14px;
+	color: #333A44;
+	resize: none;
+	width:100%;
  }
 .input-with-icon{
 	width:95%;

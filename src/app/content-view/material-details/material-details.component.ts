@@ -7,6 +7,7 @@ import { Component, OnInit, ViewChild, Input, EventEmitter } from '@angular/core
   host: { 'style': 'height: 100%' }
 })
 export class MaterialDetailsComponent implements OnInit {
+  toggle: boolean;
   @Input('edit') editMode: boolean = false;
 
   @Input('hide') hideMode: boolean = true;

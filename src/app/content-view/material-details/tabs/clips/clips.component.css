@@ -32,7 +32,7 @@
 	float: left;
 }
 .descriptive__data li, .time-based__data li {
-	padding: 8px;
+	padding: 4px;
 }
 .field__multi-line span {
 	
