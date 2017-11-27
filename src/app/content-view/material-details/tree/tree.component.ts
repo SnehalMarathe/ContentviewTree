@@ -1,28 +1,28 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Inject, Output, EventEmitter } from '@angular/core';
 import { ITreeOptions, IActionMapping } from 'angular-tree-component';
 import { ViewEncapsulation } from '@angular/core';
+
 @Component({
     selector: 'app-tree',
     templateUrl: './tree.component.html',
     encapsulation: ViewEncapsulation.None,
     styleUrls: ['./tree.component.css'],
-   
+
 })
 
 export class TreeComponent implements OnInit {
-    data: any[] = [];
+    
     toggle: boolean;
 
-    @Output() collapse: EventEmitter<boolean> = new EventEmitter(false);
-
-
+    data: any[] = [];
+   
+    @Output() hide: EventEmitter<boolean> = new EventEmitter(false);
+   
     constructor() { }
 
-
-    toggleCollapse(e) {
-        this.collapse.emit(this.toggle = !this.toggle);
-    }
-
+    toggleHide(e) {
+        this.hide.emit(this.toggle = !this.toggle);
+    }    
 
     nodes = [
         {

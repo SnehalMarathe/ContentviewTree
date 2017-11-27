@@ -11,21 +11,17 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class ContentViewComponent implements OnInit {
   editMode: boolean;
-  @ViewChild('sidenav') sideNav:any;
-  private toggleNav:any;
-
+  hideMode: boolean;
   constructor() { }
-ngAfterViewInit():any {
-    
-    this.toggleNav= ()=>{
-        this.sideNav.toggle();
-    }
-} 
+
   ngOnInit() {
   }
 
   onEdit(mode) {
     this.editMode = mode;
+  }
+  onHide(mode) {
+    this.hideMode = mode;
   }
 
   // @ViewChild(MaterialDetailsComponent) materialDetails:MaterialDetailsComponent;
