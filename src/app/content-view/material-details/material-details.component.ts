@@ -10,8 +10,6 @@ export class MaterialDetailsComponent implements OnInit {
 
   @Input('edit') editMode: boolean = false;
 
-
-
   toggleMaterialDetails: boolean = false;
 
   constructor() { }
