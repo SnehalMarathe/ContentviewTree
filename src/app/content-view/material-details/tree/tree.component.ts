@@ -16,7 +16,7 @@ export class TreeComponent implements OnInit {
 
     data: any[] = [];
    
-    @Output() hide: EventEmitter<boolean> = new EventEmitter(false);
+    @Output() hide: EventEmitter<boolean> = new EventEmitter(true);
    
     constructor() { }
 
