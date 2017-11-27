@@ -11,18 +11,17 @@ import { ViewEncapsulation } from '@angular/core';
 })
 
 export class TreeComponent implements OnInit {
-    
-    toggle: boolean;
+
+    @Input() toggleMaterialDetails: boolean;
+    hideMode: boolean = true;
+    @Output() click: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     data: any[] = [];
-   
-    @Output() hide: EventEmitter<boolean> = new EventEmitter(true);
-   
+
+
+
     constructor() { }
 
-    toggleHide(e) {
-        this.hide.emit(this.toggle = !this.toggle);
-    }    
 
     nodes = [
         {
@@ -131,6 +130,11 @@ export class TreeComponent implements OnInit {
             click: (tree, node) => this.check(node, !node.data.checked)
         }
     };
+
+    onClick() {
+        this.hideMode = !this.hideMode;
+        this.click.emit(this.hideMode);
+    }
 
     options: ITreeOptions = {
         actionMapping: this.actionMapping

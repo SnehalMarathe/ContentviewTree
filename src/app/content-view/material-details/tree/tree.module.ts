@@ -8,7 +8,7 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 @NgModule({
     exports: [
         MatButtonModule,
-       MatSidenavModule,
+        MatSidenavModule,
         MatCheckboxModule],       
 })
 

@@ -11,14 +11,13 @@ export class ContentTitleComponent implements OnInit {
 
   @Output() edit: EventEmitter<boolean> = new EventEmitter(false);
 
-
   constructor() { }
 
 
   toggleEdit(e) {
     this.edit.emit(this.toggle = !this.toggle);
   }
-
+     
 
   ngOnInit() {
   }

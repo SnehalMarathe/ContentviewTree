@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'material-details',
@@ -7,12 +7,19 @@ import { Component, OnInit, ViewChild, Input, EventEmitter } from '@angular/core
   host: { 'style': 'height: 100%' }
 })
 export class MaterialDetailsComponent implements OnInit {
-  toggle: boolean;
+
   @Input('edit') editMode: boolean = false;
 
-  @Input('hide') hideMode: boolean = true;
+
+
+  toggleMaterialDetails: boolean = false;
 
   constructor() { }
+
+  onClick(e: any) {
+    this.toggleMaterialDetails = e;
+  }
+
 
   ngOnInit() {
   }
